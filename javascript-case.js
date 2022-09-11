@@ -1,19 +1,17 @@
-var num = process.argv[2];
+const number = prompt("Enter a number: ");
 var sum = 0;
 
-console.log(process.argv);
+fnc(number)
 
-myFunc(num)
-
-function myFunc(item){
-    while(item > 0){
-        var tempNum = parseInt(item % 10);
-        item = parseInt(item / 10);
-        sum += tempNum;
+function fnc(value){
+    while(value > 0){
+        var temp = parseInt(value % 10);
+        value = parseInt(value / 10);
+        sum += temp;
     }
 }
 
 if(sum % 2 == 0)
-    console.log(sum + " - Even")
+    console.log("Even")
 else
-    console.log(sum + " - Odd")
+    console.log("Odd")
